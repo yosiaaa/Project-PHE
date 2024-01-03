@@ -1,0 +1,41 @@
+﻿@model ProjectSupplyManagement.Models.Domain.Vendor
+
+@{
+}
+
+<h1>Register Vendor</h1>
+
+<form method="post" action="Register" class="mt-5">
+    <div class="form-group">
+        <label for="CompanyName">Company Name:</label>
+        <input type="text" class="form-control" id="CompanyName" name="CompanyName" required>
+    </div>
+
+    <div class="form-group">
+        <label for="CompanyEmail">Company Email:</label>
+        <input type="email" class="form-control" id="CompanyEmail" name="CompanyEmail" required>
+    </div>
+
+    <div class="form-group">
+        <label for="PhoneNumber">Phone Number:</label>
+        <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Photo">Photo:</label>
+        <input type="file" class="form-control" id="Photo" name="Photo">
+        <small class="form-text text-muted">Upload a photo for the company.</small>
+    </div>
+
+    <div class="form-group">
+        <label for="BusinessSector">Business Sector:</label>
+        <input type="text" class="form-control" id="BusinessSector" name="BusinessSector" required>
+    </div>
+
+    <div class="form-group">
+        <label for="TypeOfCompany">Type of Company:</label>
+        <input type="text" class="form-control" id="TypeOfCompany" name="TypeOfCompany" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>

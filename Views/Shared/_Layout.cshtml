@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProjectSupplyManagement</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProjectSupplyManagement.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        @*<nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <!-- Main flex container with space-between to position items -->
+                <div class="d-flex justify-content-between">
+                    <!-- Left side items (Brand, etc.) -->
+                    <div>
+                        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Supply Management Apps</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+
+                    <!-- Right side items (Login link) -->
+                    <div class="text-end justify-content-end">
+                        <a class="nav-link text-white p-2 rounded-2 bg-primary" asp-area="" asp-controller="Admin" asp-action="Login">Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>*@
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid d-flex justify-content-between">
+                <a class="navbar-brand" href="#">Supply Management App</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="d-flex gap-3 collapse navbar-collapse justify-content-end" id="navbarText">
+                    <ul class="navbar-nav mr-auto">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-white p-2 rounded-2 bg-info" asp-controller="Vendor" asp-action="Register">Register Vendor</a>
+                        </li>
+                        
+                    </ul>
+                    <span class="navbar-text">
+                        <a class="nav-link text-white p-2 rounded-2 bg-primary" asp-area="" asp-controller="Admin" asp-action="Login">Login</a>
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+		<main role="main" class="pb-3">
+		</main>
+            @RenderBody()
+        
+    </div>
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - ProjectSupplyManagement - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

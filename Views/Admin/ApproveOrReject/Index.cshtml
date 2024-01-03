@@ -1,0 +1,23 @@
+﻿@model ProjectSupplyManagement.Models.Domain.Vendor
+
+<h2>@Model.CompanyName</h2>
+
+<p><strong>Company Name:</strong> @Model.CompanyName</p>
+<p><strong>Company Email:</strong> @Model.CompanyEmail</p>
+<p><strong>Phone Number:</strong> @Model.PhoneNumber</p>
+<p><strong>Photo:</strong> @Model.Photo</p>
+<p><strong>Business Sector:</strong> @Model.BusinessSector</p>
+<p><strong>Type of Company:</strong> @Model.TypeOfCompany</p>
+
+@if (Model.IsApproved)
+{
+    <p>Status: <strong>Approved</strong></p>
+}
+else
+{
+    <p>Status: <strong>Rejected</strong></p>
+}
+
+<p>
+    <a href="@Url.Action("ApproveVendors", "Admin")">Back to Approve Vendors List</a>
+</p>

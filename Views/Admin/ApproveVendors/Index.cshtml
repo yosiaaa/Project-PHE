@@ -1,0 +1,34 @@
+﻿@model List<ProjectSupplyManagement.Models.Domain.Vendor>
+
+<h2>Unapproved Vendors</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Company Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+			<th>Photo</th>
+            <th>Business Sector</th>
+			<th>Type Of Company</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var vendor in Model)
+        {
+            <tr>
+                <td>@vendor.CompanyName</td>
+                <td>@vendor.CompanyEmail</td>
+                <td>@vendor.PhoneNumber</td>
+				<td>@vendor.Photo</td>
+                <td>@vendor.BusinessSector</td>
+				<td>@vendor.TypeOfCompany</td>
+                <td>
+                    <a href="@Url.Action("ApproveOrReject", "Admin", new { id = vendor.Id, isApproved = true })">Approve</a> |
+                    <a href="@Url.Action("ApproveOrReject", "Admin", new { id = vendor.Id, isApproved = false })">Reject</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
